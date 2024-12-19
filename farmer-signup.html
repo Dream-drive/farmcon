@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farmer Signup - FarmConnect</title>
+  <title>FarmConnect - Signup/Login</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hidden { display: none; }
+  </style>
 </head>
 <body>
   <div class="container mt-5">
@@ -12,68 +15,81 @@
       <div class="col-md-6">
         <div class="card shadow-sm">
           <div class="card-header text-center bg-success text-white">
-            <h3>Farmer Signup</h3>
+            <h3 id="form-title">Farmer Signup</h3>
           </div>
           <div class="card-body">
-            <form action="/signup" method="post">
-              <!-- First Name -->
+            <!-- Signup Form -->
+            <form id="signup-form" class="needs-validation">
               <div class="mb-3">
                 <label for="firstName" class="form-label">First Name</label>
                 <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
               </div>
-              <!-- Last Name -->
               <div class="mb-3">
                 <label for="lastName" class="form-label">Last Name</label>
                 <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
               </div>
-              <!-- Email -->
               <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                <label for="emailSignup" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="emailSignup" name="email" placeholder="Enter your email" required>
               </div>
-              <!-- Phone Number -->
               <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <label for="passwordSignup" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordSignup" name="password" placeholder="Create a password" required>
               </div>
-              <!-- Location -->
-              <div class="mb-3">
-                <label for="location" class="form-label">Location</label>
-                <input type="text" class="form-control" id="location" name="location" placeholder="Enter your location" required>
-              </div>
-              <!-- Farm Size -->
-              <div class="mb-3">
-                <label for="farmSize" class="form-label">Farm Size (in acres)</label>
-                <input type="number" class="form-control" id="farmSize" name="farmSize" placeholder="Enter your farm size" required>
-              </div>
-              <!-- Farm Type -->
-              <div class="mb-3">
-                <label for="farmType" class="form-label">Farm Type</label>
-                <select class="form-select" id="farmType" name="farmType" required>
-                  <option value="" disabled selected>Select your farm type</option>
-                  <option value="crop">Crop Farming</option>
-                  <option value="livestock">Livestock Farming</option>
-                  <option value="mixed">Mixed Farming</option>
-                </select>
-              </div>
-              <!-- Password -->
-              <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required>
-              </div>
-              <!-- Submit Button -->
               <div class="d-grid">
                 <button type="submit" class="btn btn-success">Sign Up</button>
               </div>
             </form>
+
+            <!-- Login Form -->
+            <form id="login-form" class="needs-validation hidden">
+              <div class="mb-3">
+                <label for="emailLogin" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="emailLogin" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label for="passwordLogin" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordLogin" name="password" placeholder="Enter your password" required>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-success">Login</button>
+              </div>
+            </form>
           </div>
           <div class="card-footer text-center">
-            <p>Already have an account? <a href="/login" class="text-success">Login here</a></p>
+            <p id="toggle-text">
+              Already have an account? <a href="#" id="toggle-link" class="text-success">Login here</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    // Toggle Forms
+    const signupForm = document.getElementById('signup-form');
+    const loginForm = document.getElementById('login-form');
+    const formTitle = document.getElementById('form-title');
+    const toggleText = document.getElementById('toggle-text');
+    const toggleLink = document.getElementById('toggle-link');
+
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (signupForm.classList.contains('hidden')) {
+        // Switch to Signup
+        signupForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+        formTitle.textContent = 'Farmer Signup';
+        toggleText.innerHTML = 'Already have an account? <a href="#" id="toggle-link" class="text-success">Login here</a>';
+      } else {
+        // Switch to Login
+        signupForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+        formTitle.textContent = 'Farmer Login';
+        toggleText.innerHTML = 'Don\'t have an account? <a href="#" id="toggle-link" class="text-success">Sign up here</a>';
+      }
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -118,7 +118,7 @@
                         <!-- Product 1 -->
                         <div class="col-md-3">
                             <div class="product-card text-center p-3 shadow">
-                                <img src="images/apples" alt="Product 1" class="mb-3">
+                                <img src="images/farm.jpg" alt="Product 1" class="mb-3">
                                 <h5 class="product-name">Fresh Apples</h5>
                                 <p class="product-price">₵10.99</p>
                                 <div class="product-rating">
@@ -131,7 +131,7 @@
                         <!-- Product 2 -->
                         <div class="col-md-3">
                             <div class="product-card text-center p-3 shadow">
-                                <img src="https://via.placeholder.com/150" alt="Product 2" class="mb-3">
+                                <img src="images/farmer.jpg" alt="Product 2" class="mb-3">
                                 <h5 class="product-name">Organic Carrots</h5>
                                 <p class="product-price">₵10.99</p>
                                 <div class="product-rating">
@@ -144,7 +144,7 @@
                         <!-- Product 3 -->
                         <div class="col-md-3">
                             <div class="product-card text-center p-3 shadow">
-                                <img src="https://via.placeholder.com/150" alt="Product 3" class="mb-3">
+                                <img src="images/farmers4.jpg" alt="Product 3" class="mb-3">
                                 <h5 class="product-name">Eggs</h5>
                                 <p class="product-price">₵10.99</p>
                                 <div class="product-rating">
@@ -177,55 +177,82 @@
     </div>
 </section>
 
-
 <!-- Farmer Profiles Section -->
-<section class="farmer-profiles py-5">
+<section id="farmer-profiles" class="py-5 bg-light">
     <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Meet Our Farmers</h2>
-            <p class="section-description">Learn about the dedicated farmers bringing fresh produce to your doorstep.</p>
+        <h2 class="text-center mb-4" style="color: #024604;">
+            <i class="fas fa-seedling"></i> Meet Our Farmers
+        </h2>
+                <p class="text-center text-muted mb-5">
+            Discover our farmers, their sustainable practices, and their top-quality produce.
+        </p>
+
+        <!-- Featured Farmers -->
+        <div class="row">
+            <!-- Farmer Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Farmer 1">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text text-muted">
+                            Sustainable farming practices specializing in organic vegetables.
+                        </p>
+                        <p class="text-success"><strong>Top Products:</strong> Tomatoes, Carrots, Spinach</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Farmer Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Farmer 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ama Asante</h5>
+                        <p class="card-text text-muted">
+                            Local cocoa producer with a focus on fair trade practices.
+                        </p>
+                        <p class="text-success"><strong>Top Products:</strong> Cocoa Beans, Plantain</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Farmer Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Farmer 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Kwame Boateng</h5>
+                        <p class="card-text text-muted">
+                            Pioneer in aquaculture, providing fresh fish to local markets.
+                        </p>
+                        <p class="text-success"><strong>Top Products:</strong> Tilapia, Catfish</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row">
-            <!-- Featured Farmer 1 -->
-            <div class="col-md-4">
-                <div class="farmer-card text-center p-3 shadow">
-                    <img src="https://via.placeholder.com/200" alt="Farmer 1" class="mb-3 rounded-circle">
-                    <h5 class="farmer-name">Kwame Mensah</h5>
-                    <p class="farmer-location">Accra, Greater Accra</p>
-                    <p class="farmer-description">
-                        Specializes in organic vegetables and sustainable farming practices.
-                    </p>
-                    <button class="btn btn-success">View Products</button>
+        <!-- Farmer Spotlight -->
+        <div class="farmer-spotlight mt-5 p-4 rounded bg-white shadow">
+            <h3 class="text-center text-dark"><i class="fas fa-star"></i> Farmer Spotlight</h3>
+            <div class="row align-items-center mt-4">
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/250" class="img-fluid rounded-circle" alt="Spotlight Farmer">
                 </div>
-            </div>
-            <!-- Featured Farmer 2 -->
-            <div class="col-md-4">
-                <div class="farmer-card text-center p-3 shadow">
-                    <img src="https://via.placeholder.com/200" alt="Farmer 2" class="mb-3 rounded-circle">
-                    <h5 class="farmer-name">Ama Nkrumah</h5>
-                    <p class="farmer-location">Kumasi, Ashanti Region</p>
-                    <p class="farmer-description">
-                        Known for premium-quality yams and traditional farming methods.
+                <div class="col-md-8">
+                    <h4 class="text-success">Akosua Mensah</h4>
+                    <p class="text-muted">
+                        Akosua is a dedicated farmer from the Volta Region who specializes in producing the finest yams and cassava. Her passion for sustainable agriculture has made her a role model in her community.
                     </p>
-                    <button class="btn btn-success">View Products</button>
-                </div>
-            </div>
-            <!-- Featured Farmer 3 -->
-            <div class="col-md-4">
-                <div class="farmer-card text-center p-3 shadow">
-                    <img src="https://via.placeholder.com/200" alt="Farmer 3" class="mb-3 rounded-circle">
-                    <h5 class="farmer-name">Kojo Appiah</h5>
-                    <p class="farmer-location">Tamale, Northern Region</p>
-                    <p class="farmer-description">
-                        Focused on producing high-quality millet and maize for families.
-                    </p>
-                    <button class="btn btn-success">View Products</button>
+                    <p class="text-primary"><strong>Message:</strong> "Farming is not just a job; it's a way of life and giving back to the land."</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
 
 
 
