@@ -3,39 +3,69 @@ body {
 }
 .header {
     background-color: #f8f9fa;
+}/* Logo Styling */
+.logo img {
+    height: 130px; /* Adjust the size of the logo image */
+    width: 100px;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
 }
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #024604; /* Green */
-    margin-left: -10px;
-}
+
+/* Navbar Styling */
 .navbar {
     flex-grow: 1;
 }
+
+/* Navbar Items */
 .navbar-nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start; /* Align nav links closer to the logo */
     width: 100%;
 }
+
+/* Nav Link Styling */
 .nav-link {
     color: #024604 !important; /* Green */
 }
+
 .nav-link:hover {
     color: #1E7E34 !important; /* Darker Green */
 }
+
+/* Call-to-Action Button */
 .cta-button {
     background-color: #024604; /* Dark Green */
     color: white;
     border-radius: 5px;
     padding: 8px 20px;
 }
+
 .cta-button:hover {
-    background-color: #024604;
+    background-color: #1E7E34; /* Darker Green */
     text-decoration: none;
 }
+
+/* Cart Icon Styling */
 .header .cart-icon {
     color: #024604; /* Dark Green */
+}
+
+/* Adjust header spacing */
+.header .navbar-nav {
+    margin-left: 10px; /* Optional: Adjust space between logo and nav links */
+
+    /* Increase the size of the search input */
+.search-bar input.form-control {
+    font-size: 20px; /* Increase font size */
+    padding: 1rem 1.3rem; /* Increase padding for larger input field */
+    width: 100%; /* Make the input field take the full width */
+}
+
+/* Increase the size of the search button */
+.search-bar button {
+    font-size: 10px; /* Increase the button font size */
+    padding: 0.5rem 1rem; /* Increase padding for larger button */
+}
 }
 
 
@@ -804,4 +834,84 @@ justify-content: center;
 margin-right: 5px;
 font-size: 1.2rem; /* Lock icon size */
 color: #4CAF50;
+}
+
+
+
+/* Cart Preview Sidebar Styles */
+.cart-preview-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden to the right */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-preview-sidebar .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-preview-sidebar .cart-items-list {
+    max-height: 60%;
+    overflow-y: auto;
+}
+
+.cart-preview-sidebar .cart-summary {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.cart-preview-sidebar .cart-actions {
+    margin-top: 20px;
+}
+
+.cart-preview-sidebar .btn-close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #000;
+}
+
+#open-cart-sidebar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-name {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart-item-quantity {
+    font-size: 14px;
+    color: #888;
 }
